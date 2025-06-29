@@ -7,146 +7,170 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-      "show_edit_predictions": false,
-      "languages": {
-            "Go": {
-                  "how_edit_predictions": true
-            }
+   "soft_wrap": "editor_width",
+   "agent": {
+      "model_parameters": [],
+      "default_model": {
+         "provider": "google",
+         "model": "gemini-2.5-pro-preview-03-25"
       },
-      "formatter": "language_server",
-      "diagnostics": {
-            "inline": {
-                  "enabled": true,
-                  "update_debounce_ms": 200,
-                  "padding": 3
-            }
-      },
-      "git": {
-            "inline_blame": {
-                  "enabled": true,
-                  "show_commit_summary": true
-            }
-      },
-      "indent_guides": {
-            "enabled": true
-      },
-      "inlay_hints": {
-            "enabled": true,
-            "show_type_hints": true,
-            "show_parameter_hints": true,
-            "show_other_hints": true,
-            "show_background": false,
-            "edit_debounce_ms": 700,
-            "scroll_debounce_ms": 50,
-            "toggle_on_modifiers_press": null
-      },
-      "project_panel": {
-            "dock": "right",
-            "file_icons": true,
-            "folder_icons": true,
-            "default_width": 200,
-            "indent_guides": {
-                  "show": "never"
-            }
-      },
-      "icon_theme": "Catppuccin Mocha",
-      "hints": {
-            "assignVariableTypes": true,
-            "compositeLiteralFields": true,
-            "compositeLiteralTypes": true,
-            "constantValues": true,
-            "functionTypeParameters": true,
-            "parameterNames": true,
-            "rangeVariableTypes": true
-      },
-      "features": {
-            "edit_prediction_provider": "zed"
-      },
-      "relative_line_numbers": true,
-      "tab_bar": {
-            "show": true
-      },
-      "scrollbar": {
-            "show": "never"
-      },
-      "file_scan_exclusions": [
-            "**/.git",
-            "**/.svn",
-            "**/.hg",
-            "**/CVS",
-            "**/.DS_Store",
-            "**/Thumbs.db",
-            "**/.classpath",
-            "**/.settings",
-            // above is default from Zed
-            "**/out",
-            "**/dist",
-            "**/.husky",
-            "**/.turbo",
-            "**/.vscode-test",
-            "**/.vscode",
-            "**/.next",
-            "**/.storybook",
-            "**/.tap",
-            "**/.nyc_output",
-            "**/report",
-            "**/node_modules"
-      ],
-      "telemetry": {
-            "diagnostics": false,
-            "metrics": false
-      },
-      "ui_font_size": 13,
-      "buffer_font_size": 12,
-      "tab_size": 6,
-      "vim_mode": true,
-      "ui_font_family": "Pixel Code",
-      // "ui_font_family": "JetBrainsMono Nerd Font",
-      // "buffer_font_family": "JetBrainsMono Nerd Font",
-      "buffer_font_family": "Pixel Code",
-      "inline_completion_provider": "supermaven",
-      "theme": {
-            "mode": "system",
-            "light": "Catppuccin Mocha - No Italics",
-            "dark": "Gruvbox Dark Hard"
-      },
-      "lsp": {
-            "gopls": {
-                  "initialization_options": {
-                        "hints": {
-                              "assignVariableTypes": true,
-                              "compositeLiteralFields": true,
-                              "compositeLiteralTypes": true,
-                              "constantValues": true,
-                              "functionTypeParameters": true,
-                              "parameterNames": true,
-                              "rangeVariableTypes": true
-                        }
-                  }
-            },
-            "discord_presence": {
-                  "initialization_options": {
-                        // Application ID for the rich presence (don't touch it unless you know what you're doing)
-                        "application_id": "1263505205522337886",
-                        // Base URL for all language icons
-                        "base_icons_url": "https://raw.githubusercontent.com/xhyrom/zed-discord-presence/main/assets/icons/",
-                        "state": "di file : {filename}",
-                        "details": "Ngoding di workspace : {workspace:u}",
-                        // URL for the large image
-                        "small_image": "{base_icons_url}/{language}.png",
-                        "large_text": "Kucing", // :u capitalizes the first letter
-                        // URL for the small image
-                        "large_image": "https://i.pinimg.com/736x/4a/58/c8/4a58c821206a4b7534de8b3d4ed6ac85.jpg",
-                        "small_text": "{language:u}",
-                        // Rules to disable presence in specific workspaces
-                        "rules": {
-                              "mode": "blacklist", // Can also be "whitelist"
-                              "paths": [
-                                    "absolute path"
-                              ]
-                        },
-                        "git_integration": false
-                  }
-            }
+      "version": "2"
+   },
+   "show_edit_predictions": true,
+   "languages": {
+      "Go": {
+         "show_edit_predictions": true
       }
+   },
+   "formatter": "language_server",
+   "diagnostics": {
+      "inline": {
+         "enabled": true,
+         "update_debounce_ms": 200,
+         "padding": 3
+      }
+   },
+   "git": {
+      "inline_blame": {
+         "enabled": true,
+         "show_commit_summary": true
+      }
+   },
+   "indent_guides": {
+      "enabled": true
+   },
+   "inlay_hints": {
+      "enabled": true,
+      "show_type_hints": true,
+      "show_parameter_hints": true,
+      "show_other_hints": true,
+      "show_background": false,
+      "edit_debounce_ms": 700,
+      "scroll_debounce_ms": 50,
+      "toggle_on_modifiers_press": null
+   },
+   "project_panel": {
+      "dock": "right",
+      "file_icons": true,
+      "folder_icons": true,
+      "default_width": 200,
+      "indent_guides": {
+         "show": "never"
+      }
+   },
+   "icon_theme": "Material Icon Theme",
+   "hints": {
+      "assignVariableTypes": true,
+      "compositeLiteralFields": false,
+      "compositeLiteralTypes": false,
+      "constantValues": true,
+      "functionTypeParameters": true,
+      "parameterNames": true,
+      "rangeVariableTypes": true
+   },
+   "features": {
+      "edit_prediction_provider": "supermaven"
+   },
+   "relative_line_numbers": true,
+   "tab_bar": {
+      "show": true
+   },
+   "scrollbar": {
+      "show": "never"
+   },
+   "file_scan_exclusions": [
+      "**/.git",
+      "**/.svn",
+      "**/.hg",
+      "**/CVS",
+      "**/.DS_Store",
+      "**/Thumbs.db",
+      "**/.classpath",
+      "**/.settings",
+      // above is default from Zed
+      "**/out",
+      "**/dist",
+      "**/.husky",
+      "**/.turbo",
+      "**/.vscode-test",
+      "**/.vscode",
+      "**/.next",
+      "**/.storybook",
+      "**/.tap",
+      "**/.nyc_output",
+      "**/report",
+      "**/node_modules"
+   ],
+   "telemetry": {
+      "diagnostics": false,
+      "metrics": false
+   },
+   "show_completions_on_input": true,
+   "ui_font_size": 13,
+   "buffer_font_size": 12,
+   "tab_size": 5,
+   "vim_mode": true,
+   // "ui_font_family": "Pixel Code",
+   // "buffer_font_family": "Pixel Code",
+   "ui_font_family": "JetBrainsMono Nerd Font",
+   "buffer_font_family": "JetBrainsMono Nerd Font",
+   "inline_completion_provider": "supermaven",
+   "theme": {
+      "mode": "system",
+      "light": "Ayu Dark",
+      "dark": "Gruvbox Dark"
+   },
+   "lsp": {
+      "gopls": {
+         "initialization_options": {
+            "hints": {
+               "assignVariableTypes": true,
+               "compositeLiteralFields": false,
+               "compositeLiteralTypes": false,
+               "constantValues": true,
+               "functionTypeParameters": true,
+               "parameterNames": true,
+               "rangeVariableTypes": true
+            }
+         }
+      },
+      "rust-analyzer": {
+         "initialization_options": {
+            "inlayHints": {
+               "maxLength": null,
+               "lifetimeElisionHints": {
+                  "enable": "skip_trivial",
+                  "useParameterNames": true
+               },
+               "closureReturnTypeHints": {
+                  "enable": "always"
+               }
+            }
+         }
+      },
+      "discord_presence": {
+         "initialization_options": {
+            // Application ID for the rich presence (don't touch it unless you know what you're doing)
+            "application_id": "1263505205522337886",
+            // Base URL for all language icons
+            "base_icons_url": "https://raw.githubusercontent.com/xhyrom/zed-discord-presence/main/assets/icons/",
+            "state": "📄 {filename}",
+            "details": "Workspace {workspace:u} 🤓",
+            // URL for the large image
+            "small_image": "{base_icons_url}/{language}.png",
+            "large_text": "Fokus 🤓", // :u capitalizes the first letter
+            // URL for the small image
+            "large_image": "https://i.pinimg.com/736x/2b/d5/3d/2bd53d1649f408a55076dff78c0c239b.jpg",
+            "small_text": "{language:u}",
+            // Rules to disable presence in specific workspaces
+            "rules": {
+               "mode": "blacklist", // Can also be "whitelist"
+               "paths": [
+                  "absolute path"
+               ]
+            },
+            "git_integration": false
+         }
+      }
+   }
 }
